@@ -10,9 +10,9 @@
   --clr-white: #FFFFFF;
   --clr-black: #202020;
   --clr-grey: #707070;
-  --clr-blue: #6C63FF;
-  --clr-blue-2: #4c46b6;
-  --clr-green: #4fb646;
+  --clr-blue: #6ba7be; /* Primary blue */
+  --clr-blue-2: #4c8b97; /* Darker blue shade */
+  --clr-orange: #fc9f00; /* Accent orange */
 }
 
 body {
@@ -29,13 +29,13 @@ nav {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
+  background-color: var(--clr-blue); /* Navbar background */
 }
 
 .nav__brand {
   display: flex;
   justify-content: center;
   align-items: center;
-
   padding: 20px;
 }
 
@@ -45,7 +45,7 @@ nav {
 }
 
 .nav__brand h1 {
-  color: var(--clr-blue);
+  color: var(--clr-white); /* Brand text */
   font-size: 2.5em;
   font-weight: 800;
 }
@@ -54,7 +54,6 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-
   list-style: none;
 }
 
@@ -64,11 +63,12 @@ nav {
 
 .nav__links li a {
   text-decoration: none;
-  color: var(--clr-black);
+  color: var(--clr-white);
+  font-weight: 600;
 }
 
 .nav__links li a:hover {
-  color: var(--clr-blue);
+  color: var(--clr-orange); /* Hover color */
 }
 
 .nav__connect {
@@ -76,7 +76,7 @@ nav {
   height: 50px;
   margin: 0 auto;
 
-  background-color: var(--clr-blue);
+  background-color: var(--clr-orange); /* Button color */
   color: var(--clr-white);
 
   border: none;
@@ -91,7 +91,7 @@ nav {
 }
 
 .nav__connect:hover {
-  background-color: var(--clr-blue-2);
+  background-color: var(--clr-blue-2); /* Hover color for button */
 }
 
 /* ------------------------------------------------------ */
@@ -163,7 +163,7 @@ header {
   width: 350px;
   height: 275px;
 
-  border: 1px solid var(--clr-black);
+  border: 1px solid var(--clr-grey);
   margin: 10px auto;
 
   cursor: pointer;
@@ -173,7 +173,7 @@ header {
 }
 
 .card:hover {
-  box-shadow: 1px 1px 5px var(--clr-grey);
+  box-shadow: 1px 1px 5px var(--clr-orange); /* Hover box-shadow */
 }
 
 .card__image {
@@ -203,6 +203,7 @@ header {
   font-family: "Open Sans";
   font-size: 1.25em;
   font-weight: 600;
+  color: var(--clr-blue);
 }
 
 .card__info p {
@@ -227,7 +228,6 @@ header {
 
 .home__details {
   display: grid;
-  /* grid-template-columns: repeat(2, 1fr); */
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
   align-items: center;
 
@@ -296,7 +296,7 @@ header {
 .home__owned {
   margin: 20px 5px;
 
-  background-color: var(--clr-blue);
+  background-color: var(--clr-orange); /* Buy button */
   color: var(--clr-white);
 
   border: none;
@@ -316,7 +316,7 @@ header {
 }
 
 .home__buy:hover {
-  background-color: var(--clr-blue-2);
+  background-color: var(--clr-blue); /* Hover effect */
 }
 
 .home__contact {
@@ -330,13 +330,13 @@ header {
 }
 
 .home__contact:hover {
-  background-color: #f7f7f7;
-  color: var(--clr-blue-2);
+  background-color: var(--clr-blue-2);
+  color: var(--clr-white);
 }
 
 .home__owned {
   height: 50px;
-  background-color: var(--clr-green);
+  background-color: var(--clr-blue);
 
   display: flex;
   justify-content: center;
